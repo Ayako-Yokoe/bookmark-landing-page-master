@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="output.css">
+  <script src="./script.js" defer></script>
+  <title>Frontend Mentor | Bookmark landing page</title>
+</head>
+<body class="typography font-body">
+  <!-- Header -->
+  <header>
+    <nav aria-label="Main menu" class="px-7 py-8 relative md:px-30 py-12">
+      <div class="flex justify-between items-center">
+        <div>
+          <img src="./images/logo-bookmark.svg" alt="Bookmark logo" />
+        </div>
+        <button aria-label="Open menu" aria-expanded="false" id="open-btn" class="md:hidden">
+          <img src="./images/icon-hamburger.svg" alt="Open menu" />
+        </button>
+        <div class="hidden md:block">
+          <ul class="flex gap-1 uppercase tracking-widest text-sm">
+            <li><a href="#" class="px-6 py-4 transition-all duration-500 ease-in-out md:hover:text-red-400">Features</a></li>
+            <li><a href="#" class="px-6 py-4 transition-all duration-500 ease-in-out md:hover:text-red-400">Pricing</a></li>
+            <li><a href="#" class="px-6 py-4 transition-all duration-500 ease-in-out md:hover:text-red-400">Contact</a></li>
+            <li><a href="#" class="px-10 py-4 ml-4 bg-red-400 text-white border-2 border-red-400 rounded-lg shadow-lg transition-all duration-500 ease-in-out md:hover:bg-white md:hover:text-red-400 md:hover:border-2 md:hover:border-red-400">Login</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="menu absolute top-0 left-0 overlay-bg p-10 w-full h-screen z-5 flex flex-col justify-between md:hidden">
+        <div>
+          <div class="flex justify-between items-center">
+            <img 
+              src="./images/logo-bookmark.svg" 
+              alt="Bookmark logo" 
+              style="filter: invert(1) saturate(0%) brightness(2) contrast(100%);" 
+              />
+            <button aria-label="Close menu" aria-expanded="true" id="close-btn">
+              <img src="./images/icon-close.svg" alt="Close menu" />
+            </button>
+          </div>
+          <ul class="mt-10 text-center text-white uppercase tracking-widest">
+            <li class="menu-item"><a href="#">Features</a></li>
+            <li class="menu-item"><a href="#">Pricing</a></li>
+            <li class="menu-item"><a href="#">Contact</a></li>
+            <li class="mt-5 border border-white py-2 rounded-sm cursor-pointer"><a href="#">Login</a></li>
+          </ul>
+        </div>
+        <ul class="flex justify-center items-center gap-10">
+          <li><a href="#"><img src="./images/icon-facebook.svg" alt="Facebook icon" /></a></li>
+          <li><a href="#"><img src="./images/icon-twitter.svg" alt="X icon" /></a></li>
+        </ul>
+      </div>
+      <!-- Mobile Menu -->
+    </nav>
+  </header>
+  <!-- Header -->
+
+  <main>
+    <!-- Hero -->
+    <section class="relative mt-8 md:mt-9 md:pb-16">
+      <div class="absolute top-14 right-0 bg-blue-600 w-[80%] h-[34%] rounded-tl-[100px] rounded-bl-[100px] -z-10 md:top-36 md:w-[34%] md:h-[60%]"></div>
+      <div class="mx-2 md:flex md:flex-row-reverse md:justify-between md:items-center md:gap-4 md:mx-10">
+        <div class="md:flex-[1.05] md:h-full">
+          <img src="./images/illustration-hero.svg" alt="Main hero image" class="w-full h-full object-cover" />
+        </div>
+        <div class="mx-7 mt-14 mb-40 text-center font-medium md:flex-[0.95] md:mx-0 md:text-start md:mb-0 md:pl-20">
+          <h1 class="text-3xl mb-5 md:text-5xl">A Simple Bookmark Manager</h1>
+          <p class="font-normal text-base text-gray-400 mb-8 md:text-xl md:leading-7 md:pr-10">
+            A clean and simple interface to organize your favourite websites. Open a new 
+            browser tab and see your sites load instantly. Try it for free.
+          </p>
+          <div class="flex itesm-center justify-between gap-2 md:justify-start md:gap-4">
+            <button 
+              aria-label="Get it on Chrome"
+              class="text-white text-sm font-normal bg-blue-600 rounded-md px-4 py-2 shadow-lg border-2 border-blue-600 transition-all duration-500 ease-in-out md:text-lg md:px-5 md:hover:bg-white md:hover:text-blue-600"
+            >
+              Get it on Chrome
+            </button>
+            <button 
+              aria-label="Get it on Firefox"
+              class="text-sm font-normal bg-grey-50 rounded-md px-4 py-2 shadow-lg border-2 border-transparent transition-all duration-500 ease-in-out md:text-lg md:px-5 md:hover:border-black"
+            >
+              Get it on Firefox
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero -->
+    <!-- Features -->
+    <section>
+      <div class="flex flex-col justify-center items-center mx-7 mb-5 text-center font-medium md:max-w-150 md:mx-auto">
+        <h2 class="text-2xl mb-4 md:text-3xl md:mb-6">Features</h2>
+        <p class="font-normal text-base text-gray-400 mb-6 md:text-xl">
+          Our aim is to make it quick and easy for you to access your favourite websites. 
+          Your bookmarks sync between your devices so you can access them on the go.
+        </p>
+      </div>
+      <!-- Tab -->
+      <ul class="mx-7 text-center mb-18 md:flex md:justify-center md:items-center md:mb-14" role="tablist">
+        <li class="tab-item text-gray-400 text-lg transition-all duration-300 ease-in-out md:min-w-[16rem] md:hover:text-red-400">
+          <button class="tab-button active" data-tab="bookmarking" type="button" role="tab" aria-controls="bookmarking" aria-selected="false" class="md:px-6">Simple Bookmarking</button>
+        </li>
+        <li class="tab-item text-gray-400 text-lg transition-all duration-300 ease-in-out md:min-w-[16rem] md:hover:text-red-400">
+          <button class="tab-button" data-tab="searching" type="button" role="tab" aria-controls="searching" aria-selected="false">Speedy Searching</button>
+        </li>
+        <li class="tab-item text-gray-400 text-lg transition-all duration-300 ease-in-out md:min-w-[16rem] md:hover:text-red-400">
+          <button class="tab-button" data-tab="sharing" type="button" role="tab" aria-controls="sharing" aria-selected="false">Easy Sharing</button>
+        </li>
+      </ul>
+      <!-- Tab -->
+      <div class="relative md:pb-16">
+        <div class="absolute top-9 left-0 bg-blue-600 w-[80%] h-[40%] rounded-tr-[100px] rounded-br-[100px] -z-10 md:top-40 md:w-[44%] md:h-[60%]"></div>
+        <!-- Tab 1 -->
+        <article id="tab-bookmarking" class="tab-panel active" role="tabpanel" aria-hidden="false">
+          <div class="mx-7 md:flex-[1.1] md:min-h-[520px] md:flex md:justify-center md:items-center">
+            <img src="./images/illustration-features-tab-1.svg" alt="Bookmark in one click" class="w-full h-auto object-cover"  />
+          </div>
+          <div class="mx-7 text-center mb-20 pt-20 md:flex-[0.9] md:flex md:flex-col md:justify-center md:text-start md:items-start md:pt-0 md:mb-0 md:pl-20">
+            <h3 class="text-2xl font-medium mb-4 md:text-3xl md:mb-6">Bookmark in one click</h3>
+            <p class="font-normal text-base text-gray-400 mb-6 md:text-xl md:mb-8 md:leading-8">
+              Organize your bookmarks however you like. Our simple drag-and-drop interface 
+              gives you complete control over how you manage your favourite sites.
+            </p>
+            <button aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>
+          </div>
+        </article>
+        <!-- Tab 2 -->
+        <article id="tab-searching" class="tab-panel">
+          <div class="mx-7 md:flex-[1.1] md:min-h-[520px] md:flex md:justify-center md:items-center">
+            <img src="./images/illustration-features-tab-2.svg" alt="Intelligent search" class="w-full h-auto object-cover" />
+          </div>
+          <div class="mx-7 text-center mb-30 pt-20 md:flex-[0.9] md:flex md:flex-col md:justify-center md:text-start md:items-start md:pt-0 md:mb-0 md:pl-20">
+            <h3 class="text-2xl font-medium mb-4 md:text-3xl md:mb-6">Intelligent search</h3>
+            <p class="font-normal text-base text-gray-400 mb-6 md:text-xl md:mb-8 md:leading-8">
+              Our powerful search feature will help you find saved sites in no time at all. 
+              No need to trawl through all of your bookmarks.
+            </p>
+            <button aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>  
+          </div>
+        </article>
+        <!-- Tab 3 -->
+        <article id="tab-sharing" class="tab-panel">
+          <div class="mx-7 md:flex-[1.1] md:min-h-[520px] md:flex md:justify-center md:items-center">
+            <img src="./images/illustration-features-tab-3.svg" alt="Share your bookmarks" class="w-full h-auto object-cover" />
+          </div>
+          <div class="mx-7 text-center mb-30 pt-20 md:flex-[0.9] md:flex md:flex-col md:justify-center md:text-start md:items-start md:pt-0 md:mb-0 md:pl-20">
+            <h3 class="text-2xl font-medium mb-4 md:text-3xl md:mb-6">Share your bookmarks</h3>
+            <p class="font-normal text-base text-gray-400 mb-6 md:text-xl md:mb-8 md:leading-8">
+              Easily share your bookmarks and collections with others. Create a shareable 
+              link that you can send at the click of a button.
+            </p>
+            <button aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- Features -->
+    <!-- Download -->
+    <section class="mx-9 mb-35 md:mt-20">
+      <div class="text-center font-medium md:max-w-150 md:mx-auto">
+        <h2 class="text-2xl mb-4 md:text-3xl md:mb-6">Download the extension</h2>
+        <p class="font-normal text-base text-gray-400 mb-6 md:text-xl md:mb-10">
+          We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+          got a favourite you’d like us to prioritize.
+        </p>
+      </div>
+      <div class="flex flex-col gap-10 mx-2 md:max-w-230 md:mx-auto md:flex-row md:gap-6">
+        <!-- Card 1 -->
+        <div class="w-full flex flex-col items-center rounded-xl shadow-xl shadow-blue-600/10 md:mb-20">
+          <img src="./images/logo-chrome.svg" alt="Chrome logo" class="mt-15 mb-7" />
+          <h3 class="text-2xl font-medium mb-2">Add to Chrome</h3>
+          <p class="font-normal text-base text-gray-400 mb-8">Minimum version 62</p>
+          <img src="./images/bg-dots.svg" />
+          <button aria-label="Add & Install Extension" class="mt-6 mb-8 px-8 py-3 bg-blue-600 text-white rounded-md shadow-xl shadow-blue-600/10 border-2 border-blue-600 transition-all duration-500 ease-in-out md:hover:bg-white md:hover:text-blue-600">Add & Install Extension</button>
+        </div>
+        <!-- Card 2 -->
+        <div class="w-full flex flex-col items-center rounded-xl shadow-xl shadow-blue-600/10 md:mt-10 md:mb-10">
+          <img src="./images/logo-firefox.svg" alt="Firefox logo" class="mt-15 mb-7" />
+          <h3 class="text-2xl font-medium mb-2">Add to Firefox</h3>
+          <p class="font-normal text-base text-gray-400 mb-8">Minimum version 55</p>
+          <img src="./images/bg-dots.svg" />
+          <button aria-label="Add & Install Extension" class="mt-6 mb-8 px-8 py-3 bg-blue-600 text-white rounded-md shadow-xl shadow-blue-600/10 border-2 border-blue-600 transition-all duration-500 ease-in-out md:hover:bg-white md:hover:text-blue-600">Add & Install Extension</button>
+        </div>
+        <!-- Card 3 -->
+        <div class="w-full flex flex-col items-center rounded-xl shadow-xl shadow-blue-600/10 md:mt-20">
+          <img src="./images/logo-opera.svg" alt="Opera logo" class="mt-15 mb-7" />
+          <h3 class="text-2xl font-medium mb-2">Add to Opera</h3>
+          <p class="font-normal text-base text-gray-400 mb-8">Minimum version 46</p>
+          <img src="./images/bg-dots.svg" />
+          <button aria-label="Add & Install Extension" class="mt-6 mb-8 px-8 py-3 bg-blue-600 text-white rounded-md shadow-xl shadow-blue-600/10 border-2 border-blue-600 transition-all duration-500 ease-in-out md:hover:bg-white md:hover:text-blue-600">Add & Install Extension</button>
+        </div>
+      </div>
+    </section>
+    <!-- Download -->
+    <!-- FAQ -->
+    <section class="mx-7 mb-32 md:max-w-150 md:mx-auto md:mb-38">
+      <div class="text-center font-medium mb-14">
+        <h2 class="text-2xl mb-4 md:text-3xl md:mb-6">Frequently Asked Questions</h2>
+        <p class="font-normal text-base text-gray-400 mb-6 md:text-xl">
+          Here are some of our FAQs. If you have any other questions you’d like 
+          answered please feel free to email us.
+        </p>
+      </div>
+      <div>
+        <article class="relative accordion-border">
+          <!-- Question 1 -->
+          <div class="flex justify-between pt-6 pb-4 cursor-pointer hover:text-red-400 question" aria-expanded="false" aria-controls="faq1">
+            <h3 class="font-medium md:font-normal">What is Bookmark?</h3>
+            <button id="toggle-ans-icon-open" aria-label="Toggle answer to open" aria-expanded="false">
+              <img src="./images/icon-arrow.svg" alt="Answer closed" />
+            </button>
+            <button id="toggle-ans-icon-close" aria-label="Toggle answer to close" aria-expanded="false" class="toggle-ans-icon-hidden">
+              <img src="./images/icon-arrow-active.svg" alt="Answer open" class="rotate-180" />
+            </button>
+          </div>
+          <!-- Answer 1 -->
+          <p id="faq1" class="font-normal text-base text-gray-600 leading-8 accordion-hidden">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+            justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+          </p>
+        </article>
+        <article class="relative accordion-border">
+          <!-- Question 2 -->
+          <div class="flex justify-between pt-6 pb-4 cursor-pointer hover:text-red-400 question" aria-expanded="false" aria-controls="faq2">
+            <h3 class="font-medium md:font-normal">How can I request a new browser?</h3>
+            <button id="toggle-ans-icon-open" aria-label="Toggle answer to open" aria-expanded="false">
+              <img src="./images/icon-arrow.svg" alt="Answer closed" />
+            </button>
+            <button id="toggle-ans-icon-close" aria-label="Toggle answer to close" aria-expanded="false" class="toggle-ans-icon-hidden">
+              <img src="./images/icon-arrow-active.svg" alt="Answer open" class="rotate-180" />
+            </button>
+          </div>
+          <!-- Answer 2 -->
+          <p id="faq2" class="font-normal text-base text-gray-600 leading-8 accordion-hidden">
+            Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+          </p>
+        </article>
+        <article class="relative accordion-border">
+          <!-- Question 3 -->
+          <div class="flex justify-between pt-6 pb-4 cursor-pointer hover:text-red-400 question" aria-expanded="false" aria-controls="faq3">
+            <h3 class="font-medium md:font-normal">Is there a mobile app?</h3>
+            <button id="toggle-ans-icon-open" aria-label="Toggle answer to open" aria-expanded="false">
+              <img src="./images/icon-arrow.svg" alt="Answer closed" />
+            </button>
+            <button id="toggle-ans-icon-close" aria-label="Toggle answer to close" aria-expanded="false" class="toggle-ans-icon-hidden">
+              <img src="./images/icon-arrow-active.svg" alt="Answer open" class="rotate-180" />
+            </button>
+          </div>
+          <!-- Answer 3 -->
+          <p id="faq3" class="font-normal text-base text-gray-600 leading-8 accordion-hidden">
+            Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+            sollicitudin ex et ultricies bibendum.
+          </p>
+        </article>
+        <article class="relative accordion-border">
+          <!-- Question 4 -->
+          <div class="flex justify-between pt-6 pb-4 cursor-pointer hover:text-red-400 question" aria-expanded="false" aria-controls="faq4">
+            <h3 class="font-medium md:font-normal">What about other Chromium browsers?</h3>
+            <button id="toggle-ans-icon-open" aria-label="Toggle answer to open" aria-expanded="false">
+              <img src="./images/icon-arrow.svg" alt="Answer closed" />
+            </button>
+            <button id="toggle-ans-icon-close" aria-label="Toggle answer to close" aria-expanded="false" class="toggle-ans-icon-hidden">
+              <img src="./images/icon-arrow-active.svg" alt="Answer open" class="rotate-180" />
+            </button>
+          </div>
+          <!-- Answer 4 -->
+          <p id="faq4" class="font-normal text-base text-gray-600 leading-8 accordion-hidden">
+            Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+            vitae neque eget nisl gravida pellentesque non ut velit.
+          </p>
+        </article>
+      </div>
+      <div class="flex justify-center items-center mt-14">
+        <a 
+          href="#" 
+          aria-label="More info" 
+          class="px-6 py-3 bg-blue-600 text-white rounded-md shadow-lg cursor-pointer"
+        >
+          More Info
+        </a>
+      </div>
+    </section>
+    <!-- FAQ -->
+    <!-- Subscription -->
+    <section class="bg-blue-600">
+      <div class="mx-8 pt-20 pb-16 text-white text-center md:max-w-110 md:mx-auto">
+        <p class="uppercase text-xs tracking-[0.2rem] mb-2 md:mb-8">35,000+ already joined</p>
+        <h2 class="text-2xl mb-8 md:text-3xl">Stay up-to-date with what we’re doing</h2>
+        <form class="md:flex md:justify-start md:items-start md:gap-2" novalidate>
+          <div>
+            <div class="input-wrapper">
+              <input 
+                id="email"
+                type="email" 
+                placeholder="Enter your email address" 
+                aria-label="Email address"
+                aria-describedby="email-error"
+                aria-invalid="false"
+                class="w-full rounded-md outline-none md:flex-3 md:mb-0"
+              />
+              <img src="./images/icon-error.svg" alt="Input error" class="error-icon" />
+            </div>
+            <div class="error-wrapper">
+              <i id="email-error" role="alert">Whoops, make sure it's an email</i>
+            </div>
+          </div>
+          <button 
+            id="contact-btn"
+            type="submit"
+            aria-label="Contact us button"
+            class="w-full bg-red-400 rounded-md px-5 py-3 mt-4 text-white text-center shadow-lg border-2 border-red-400 transition-all duration-500 ease-in-out md:flex-1 md:py-4 md:mb-0 md:mt-0 md:hover:bg-white md:hover:text-red-400"
+            disabled
+          >
+            Contact Us
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- Subscription -->
+  </main>
+  <footer class="bg-blue-950">
+    <div class="py-10 flex flex-col justify-center items-center md:flex-row md:justify-between md:mx-30">
+      <div class="md:flex md:items-center md:gap-10">
+        <div class="flex items-center gap-3">
+          <img src="./images/logo-bookmark-logo.svg" alt="Bookmark Logo" />
+          <img src="./images/logo-bookmark-text.svg" alt="Bookmark Logo" />
+        </div>
+        <ul class="flex flex-col justify-center items-center gap-6 text-white uppercase font-light tracking-wider mt-10 cursor-pointer md:flex-row md:mt-0 md:text-xs">
+          <li class="transition-all duration-0.5 ease-in-out md:hover:text-red-400"><a href="#">Features</a></li>
+          <li class="transition-all duration-0.5 ease-in-out md:hover:text-red-400"><a href="#">Pricing</a></li>
+          <li class="transition-all duration-0.5 ease-in-out md:hover:text-red-400"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="flex items-center gap-10 mt-12 md:mt-0">
+          <li><a href="#" class="flex justify-center items-center"><span class="social-icon facebook-icon"></span></a></li>
+          <li><a href="#" class="flex justify-center items-center"><span class="social-icon x-icon"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
