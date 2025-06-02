@@ -47,7 +47,6 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - Tailwind CSS
-- Vite
 
 ### What I learned
 
