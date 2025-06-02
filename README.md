@@ -28,10 +28,10 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="./src/images/375px.png" alt="375px" width="200" height="auto">
-<img src="./src/images/375px-menu.jpeg" alt="375px menu" width="200" height="auto">
-<img src="./src/images/1440px.png" alt="1440px" width="300" height="auto">
-<img src="./src/images/1440px-active.png" alt="1440px active" width="300" height="auto">
+<img src="./public/images/375px.png" alt="375px" width="200" height="auto">
+<img src="./public/images/375px-menu.jpeg" alt="375px menu" width="200" height="auto">
+<img src="./public/images/1440px.png" alt="1440px" width="300" height="auto">
+<img src="./public/images/1440px-active.png" alt="1440px active" width="300" height="auto">
 
 ### Links
 
