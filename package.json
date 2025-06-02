@@ -4,7 +4,7 @@
   "description": "![Design preview for the Bookmark landing page coding challenge](preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "build": "vite build",
+    "build": "npm run build:css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --minify",
     "watch:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
