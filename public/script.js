@@ -44,8 +44,8 @@ function toggleAnswer() {
   targetAnswer.classList.toggle('accordion-hidden', isExpanded);
   targetAnswer.classList.toggle('accordion-visible', !isExpanded);
 
-  const ansOpenIcon = this.querySelector('#toggle-ans-icon-open');
-  const ansCloseIcon = this.querySelector('#toggle-ans-icon-close');
+  const ansOpenIcon = this.querySelector('.toggle-ans-icon-open');
+  const ansCloseIcon = this.querySelector('.toggle-ans-icon-close');
 
   ansOpenIcon.classList.toggle('toggle-ans-icon-hidden', !isExpanded);
   ansOpenIcon.classList.toggle('toggle-ans-icon-visible', isExpanded);
