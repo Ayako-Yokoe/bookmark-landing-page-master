@@ -79,12 +79,14 @@
           </p>
           <div class="flex itesm-center justify-between gap-2 md:justify-start md:gap-4">
             <button 
+              type="button"
               aria-label="Get it on Chrome"
               class="text-white text-sm font-normal bg-blue-600 rounded-md px-4 py-2 shadow-lg border-2 border-blue-600 transition-all duration-500 ease-in-out md:text-lg md:px-5 md:hover:bg-white md:hover:text-blue-600"
             >
               Get it on Chrome
             </button>
             <button 
+              type="button"
               aria-label="Get it on Firefox"
               class="text-sm font-normal bg-grey-50 rounded-md px-4 py-2 shadow-lg border-2 border-transparent transition-all duration-500 ease-in-out md:text-lg md:px-5 md:hover:border-black"
             >
@@ -130,7 +132,7 @@
               Organize your bookmarks however you like. Our simple drag-and-drop interface 
               gives you complete control over how you manage your favourite sites.
             </p>
-            <button aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>
+            <button type="button" aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>
           </div>
         </div>
         <!-- Tab 2 -->
@@ -144,7 +146,7 @@
               Our powerful search feature will help you find saved sites in no time at all. 
               No need to trawl through all of your bookmarks.
             </p>
-            <button aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>  
+            <button type="button" aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>  
           </div>
         </div>
         <!-- Tab 3 -->
@@ -158,7 +160,7 @@
               Easily share your bookmarks and collections with others. Create a shareable 
               link that you can send at the click of a button.
             </p>
-            <button aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>
+            <button type="button" aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>
           </div>
         </div>
       </div>
@@ -180,7 +182,7 @@
           <h3 class="text-2xl font-medium mb-2">Add to Chrome</h3>
           <p class="font-normal text-base text-gray-400 mb-8">Minimum version 62</p>
           <img src="./images/bg-dots.svg" alt="" />
-          <button aria-label="Add & Install Extension" class="mt-6 mb-8 px-8 py-3 bg-blue-600 text-white rounded-md shadow-xl shadow-blue-600/10 border-2 border-blue-600 transition-all duration-500 ease-in-out md:hover:bg-white md:hover:text-blue-600">Add & Install Extension</button>
+          <button type="button" aria-label="Add & Install Extension" class="mt-6 mb-8 px-8 py-3 bg-blue-600 text-white rounded-md shadow-xl shadow-blue-600/10 border-2 border-blue-600 transition-all duration-500 ease-in-out md:hover:bg-white md:hover:text-blue-600">Add & Install Extension</button>
         </div>
         <!-- Card 2 -->
         <div class="w-full flex flex-col items-center rounded-xl shadow-xl shadow-blue-600/10 md:mt-10 md:mb-10">
@@ -188,7 +190,7 @@
           <h3 class="text-2xl font-medium mb-2">Add to Firefox</h3>
           <p class="font-normal text-base text-gray-400 mb-8">Minimum version 55</p>
           <img src="./images/bg-dots.svg" alt="" />
-          <button aria-label="Add & Install Extension" class="mt-6 mb-8 px-8 py-3 bg-blue-600 text-white rounded-md shadow-xl shadow-blue-600/10 border-2 border-blue-600 transition-all duration-500 ease-in-out md:hover:bg-white md:hover:text-blue-600">Add & Install Extension</button>
+          <button type="button" aria-label="Add & Install Extension" class="mt-6 mb-8 px-8 py-3 bg-blue-600 text-white rounded-md shadow-xl shadow-blue-600/10 border-2 border-blue-600 transition-all duration-500 ease-in-out md:hover:bg-white md:hover:text-blue-600">Add & Install Extension</button>
         </div>
         <!-- Card 3 -->
         <div class="w-full flex flex-col items-center rounded-xl shadow-xl shadow-blue-600/10 md:mt-20">
@@ -196,7 +198,7 @@
           <h3 class="text-2xl font-medium mb-2">Add to Opera</h3>
           <p class="font-normal text-base text-gray-400 mb-8">Minimum version 46</p>
           <img src="./images/bg-dots.svg" alt="" />
-          <button aria-label="Add & Install Extension" class="mt-6 mb-8 px-8 py-3 bg-blue-600 text-white rounded-md shadow-xl shadow-blue-600/10 border-2 border-blue-600 transition-all duration-500 ease-in-out md:hover:bg-white md:hover:text-blue-600">Add & Install Extension</button>
+          <button type="button" aria-label="Add & Install Extension" class="mt-6 mb-8 px-8 py-3 bg-blue-600 text-white rounded-md shadow-xl shadow-blue-600/10 border-2 border-blue-600 transition-all duration-500 ease-in-out md:hover:bg-white md:hover:text-blue-600">Add & Install Extension</button>
         </div>
       </div>
     </section>
@@ -214,7 +216,7 @@
         <article class="relative accordion-border">
           <!-- Question 1 -->
           <button class="flex justify-between items-center text-start w-full pt-6 pb-4 cursor-pointer hover:text-red-400 question" aria-expanded="false" aria-controls="faq1" type="button">
-            <h3 class="font-medium md:font-normal">What is Bookmark?</h3>
+            <span class="font-medium md:font-normal">What is Bookmark?</span>
             <span class="toggle-ans-icon-open">
               <img src="./images/icon-arrow.svg" alt="Answer closed" />
             </span>
@@ -231,7 +233,7 @@
         <article class="relative accordion-border">
           <!-- Question 2 -->
           <button class="flex justify-between items-center text-start w-full pt-6 pb-4 cursor-pointer hover:text-red-400 question" aria-expanded="false" aria-controls="faq2" type="button">
-            <h3 class="font-medium md:font-normal">How can I request a new browser?</h3>
+            <span class="font-medium md:font-normal">How can I request a new browser?</span>
             <span class="toggle-ans-icon-open">
               <img src="./images/icon-arrow.svg" alt="Answer closed" />
             </span>
@@ -250,7 +252,7 @@
         <article class="relative accordion-border">
           <!-- Question 3 -->
           <button class="flex justify-between items-center text-start w-full pt-6 pb-4 cursor-pointer hover:text-red-400 question" aria-expanded="false" aria-controls="faq3" type="button">
-            <h3 class="font-medium md:font-normal">Is there a mobile app?</h3>
+            <span class="font-medium md:font-normal">Is there a mobile app?</span>
             <span class="toggle-ans-icon-open">
               <img src="./images/icon-arrow.svg" alt="Answer closed" />
             </span>
@@ -268,7 +270,7 @@
         <article class="relative accordion-border">
           <!-- Question 4 -->
           <button class="flex justify-between items-center text-start w-full pt-6 pb-4 cursor-pointer hover:text-red-400 question" aria-expanded="false" aria-controls="faq4" type="button">
-            <h3 class="font-medium md:font-normal">What about other Chromium browsers?</h3>
+            <span class="font-medium md:font-normal">What about other Chromium browsers?</span>
             <span class="toggle-ans-icon-open">
               <img src="./images/icon-arrow.svg" alt="Answer closed" />
             </span>
