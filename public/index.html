@@ -11,16 +11,16 @@
 </head>
 <body class="typography font-body">
   <!-- Header -->
-  <header>
-    <nav aria-label="Main menu" class="px-7 py-8 relative md:px-30 py-12">
+  <header class="max-w-screen-2xl mx-auto">
+    <nav aria-label="Main menu" class="px-7 py-8 relative md:px-20 lg:px-30 md:py-12">
       <div class="flex justify-between items-center">
-        <div>
+        <div id="logo-oriignal" class="md:min-w-[148px] md:flex-shrink-0">
           <img src="./images/logo-bookmark.svg" alt="Bookmark logo" />
         </div>
         <button type="button" aria-label="Open menu" aria-expanded="false" id="open-btn" class="md:hidden">
           <img src="./images/icon-hamburger.svg" alt="Open menu" />
         </button>
-        <div class="hidden md:block">
+        <div class="hidden md:block md:flex md:grow md:justify-end">
           <ul class="flex gap-1 uppercase tracking-widest text-sm">
             <li><a href="#" class="px-6 py-4 transition-all duration-500 ease-in-out md:hover:text-red-400">Features</a></li>
             <li><a href="#" class="px-6 py-4 transition-all duration-500 ease-in-out md:hover:text-red-400">Pricing</a></li>
@@ -30,18 +30,13 @@
         </div>
       </div>
       <!-- Mobile Menu -->
-      <div class="menu absolute top-0 left-0 overlay-bg p-10 w-full h-screen z-5 flex flex-col justify-between md:hidden">
+      <div class="menu absolute top-0 left-0 overlay-bg px-8 py-12 w-full h-screen z-5 flex flex-col justify-between md:hidden">
         <div>
           <div class="flex justify-between items-center">
             <img 
               src="./images/logo-bookmark.svg" 
-              alt="Bookmark logo"  
+              alt="Bookmark logo"
               />
-            <!-- <img 
-              src="./images/logo-bookmark.svg" 
-              alt="Bookmark logo" 
-              style="filter: invert(1) saturate(0%) brightness(2) contrast(100%);" 
-              /> -->
             <button type="button" aria-label="Close menu" aria-expanded="true" id="close-btn">
               <img src="./images/icon-close.svg" alt="Close menu" />
             </button>
@@ -67,28 +62,28 @@
     <!-- Hero -->
     <section class="relative mt-8 md:mt-9 md:pb-16">
       <div class="absolute top-14 right-0 bg-blue-600 w-[80%] h-[34%] rounded-tl-[100px] rounded-bl-[100px] -z-10 md:top-36 md:w-[34%] md:h-[60%]"></div>
-      <div class="mx-2 md:flex md:flex-row-reverse md:justify-between md:items-center md:gap-4 md:mx-10">
+      <div class="mx-2 md:flex md:flex-row-reverse md:justify-between md:items-center md:gap-4 md:mx-10 lg:max-w-screen-2xl lg:mx-auto">
         <div class="md:flex-[1.05] md:h-full">
           <img src="./images/illustration-hero.svg" alt="Main hero image" class="w-full h-full object-cover" />
         </div>
-        <div class="mx-7 mt-14 mb-40 text-center font-medium md:flex-[0.95] md:mx-0 md:text-start md:mb-0 md:pl-20">
+        <div class="mx-7 mt-14 mb-40 text-center font-medium md:flex-[0.95] md:mx-0 md:text-start md:mb-0 md:pl-12 lg:pl-20">
           <h1 class="text-3xl mb-5 md:text-5xl">A Simple Bookmark Manager</h1>
           <p class="font-normal text-base text-gray-400 mb-8 md:text-xl md:leading-7 md:pr-10">
             A clean and simple interface to organize your favourite websites. Open a new 
             browser tab and see your sites load instantly. Try it for free.
           </p>
-          <div class="flex itesm-center justify-between gap-2 md:justify-start md:gap-4">
+          <div class="flex items-center justify-between gap-2 md:justify-start md:gap-4">
             <button 
               type="button"
               aria-label="Get it on Chrome"
-              class="text-white text-sm font-normal bg-blue-600 rounded-md px-4 py-2 shadow-lg border-2 border-blue-600 transition-all duration-500 ease-in-out md:text-lg md:px-5 md:hover:bg-white md:hover:text-blue-600"
+              class="flex-1 md:flex-initial text-white text-sm font-normal bg-blue-600 rounded-md px-4 py-2 shadow-lg border-2 border-blue-600 transition-all duration-500 ease-in-out md:text-lg md:px-5 md:hover:bg-white md:hover:text-blue-600"
             >
               Get it on Chrome
             </button>
             <button 
               type="button"
               aria-label="Get it on Firefox"
-              class="text-sm font-normal bg-grey-50 rounded-md px-4 py-2 shadow-lg border-2 border-transparent transition-all duration-500 ease-in-out md:text-lg md:px-5 md:hover:border-black"
+              class="flex-1 md:flex-initial text-sm font-normal bg-grey-50 rounded-md px-4 py-2 shadow-lg border-2 border-transparent transition-all duration-500 ease-in-out md:text-lg md:px-5 md:hover:border-black"
             >
               Get it on Firefox
             </button>
@@ -99,15 +94,15 @@
     <!-- Hero -->
     <!-- Features -->
     <section>
-      <div class="flex flex-col justify-center items-center mx-7 mb-5 text-center font-medium md:max-w-150 md:mx-auto">
+      <div class="flex flex-col justify-center items-center mx-7 mb-5 text-center font-medium md:max-w-150 md:mx-auto lg:max-w-screen-2xl lg:mx-auto">
         <h2 class="text-2xl mb-4 md:text-3xl md:mb-6">Features</h2>
-        <p class="font-normal text-base text-gray-400 mb-6 md:text-xl">
+        <p class="font-normal text-base text-gray-400 mb-6 md:text-xl max-w-2xl">
           Our aim is to make it quick and easy for you to access your favourite websites. 
           Your bookmarks sync between your devices so you can access them on the go.
         </p>
       </div>
       <!-- Tab -->
-      <ul class="mx-7 text-center mb-18 md:flex md:justify-center md:items-center md:mb-14" role="tablist">
+      <ul class="mx-7 text-center mb-18 md:flex md:justify-center md:items-center md:mb-14 lg:max-w-screen-2xl lg:mx-auto" role="tablist">
         <li role="presentation" class="tab-item text-gray-400 text-lg transition-all duration-300 ease-in-out md:min-w-[16rem] md:hover:text-red-400">
           <button class="tab-button active" data-tab="bookmarking" type="button" role="tab" aria-controls="bookmarking" aria-selected="false" class="md:px-6">Simple Bookmarking</button>
         </li>
@@ -121,53 +116,55 @@
       <!-- Tab -->
       <div class="relative md:pb-16">
         <div class="absolute top-9 left-0 bg-blue-600 w-[80%] h-[40%] rounded-tr-[100px] rounded-br-[100px] -z-10 md:top-40 md:w-[44%] md:h-[60%]"></div>
-        <!-- Tab 1 -->
-        <div id="tab-bookmarking" class="tab-panel active" role="tabpanel" aria-hidden="false">
-          <div class="mx-7 md:flex-[1.1] md:min-h-[520px] md:flex md:justify-center md:items-center">
-            <img src="./images/illustration-features-tab-1.svg" alt="Bookmark in one click" class="w-full h-auto object-cover"  />
+        <div class="lg:max-w-screen-2xl lg:mx-auto">
+          <!-- Tab 1 -->
+          <div id="tab-bookmarking" class="tab-panel active" role="tabpanel" aria-hidden="false">
+            <div class="mx-7 md:flex-[1.1] md:min-h-[520px] md:flex md:justify-center md:items-center">
+              <img src="./images/illustration-features-tab-1.svg" alt="Bookmark in one click" class="w-full h-auto object-cover"  />
+            </div>
+            <div class="mx-7 text-center mb-20 pt-20 md:flex-[0.9] md:flex md:flex-col md:justify-center md:text-start md:items-start md:pt-0 md:mb-0 lg:pl-20">
+              <h3 class="text-2xl font-medium mb-4 md:text-3xl md:mb-6">Bookmark in one click</h3>
+              <p class="font-normal text-base text-gray-400 mb-6 md:text-xl md:mb-8 md:leading-8">
+                Organize your bookmarks however you like. Our simple drag-and-drop interface 
+                gives you complete control over how you manage your favourite sites.
+              </p>
+              <button type="button" aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>
+            </div>
           </div>
-          <div class="mx-7 text-center mb-20 pt-20 md:flex-[0.9] md:flex md:flex-col md:justify-center md:text-start md:items-start md:pt-0 md:mb-0 md:pl-20">
-            <h3 class="text-2xl font-medium mb-4 md:text-3xl md:mb-6">Bookmark in one click</h3>
-            <p class="font-normal text-base text-gray-400 mb-6 md:text-xl md:mb-8 md:leading-8">
-              Organize your bookmarks however you like. Our simple drag-and-drop interface 
-              gives you complete control over how you manage your favourite sites.
-            </p>
-            <button type="button" aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>
+          <!-- Tab 2 -->
+          <div id="tab-searching" class="tab-panel">
+            <div class="mx-7 md:flex-[1.1] md:min-h-[520px] md:flex md:justify-center md:items-center">
+              <img src="./images/illustration-features-tab-2.svg" alt="Intelligent search" class="w-full h-auto object-cover" />
+            </div>
+            <div class="mx-7 text-center mb-30 pt-20 md:flex-[0.9] md:flex md:flex-col md:justify-center md:text-start md:items-start md:pt-0 md:mb-0 lg:pl-20">
+              <h3 class="text-2xl font-medium mb-4 md:text-3xl md:mb-6">Intelligent search</h3>
+              <p class="font-normal text-base text-gray-400 mb-6 md:text-xl md:mb-8 md:leading-8">
+                Our powerful search feature will help you find saved sites in no time at all. 
+                No need to trawl through all of your bookmarks.
+              </p>
+              <button type="button" aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>  
+            </div>
           </div>
-        </div>
-        <!-- Tab 2 -->
-        <div id="tab-searching" class="tab-panel">
-          <div class="mx-7 md:flex-[1.1] md:min-h-[520px] md:flex md:justify-center md:items-center">
-            <img src="./images/illustration-features-tab-2.svg" alt="Intelligent search" class="w-full h-auto object-cover" />
-          </div>
-          <div class="mx-7 text-center mb-30 pt-20 md:flex-[0.9] md:flex md:flex-col md:justify-center md:text-start md:items-start md:pt-0 md:mb-0 md:pl-20">
-            <h3 class="text-2xl font-medium mb-4 md:text-3xl md:mb-6">Intelligent search</h3>
-            <p class="font-normal text-base text-gray-400 mb-6 md:text-xl md:mb-8 md:leading-8">
-              Our powerful search feature will help you find saved sites in no time at all. 
-              No need to trawl through all of your bookmarks.
-            </p>
-            <button type="button" aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>  
-          </div>
-        </div>
-        <!-- Tab 3 -->
-        <div id="tab-sharing" class="tab-panel">
-          <div class="mx-7 md:flex-[1.1] md:min-h-[520px] md:flex md:justify-center md:items-center">
-            <img src="./images/illustration-features-tab-3.svg" alt="Share your bookmarks" class="w-full h-auto object-cover" />
-          </div>
-          <div class="mx-7 text-center mb-30 pt-20 md:flex-[0.9] md:flex md:flex-col md:justify-center md:text-start md:items-start md:pt-0 md:mb-0 md:pl-20">
-            <h3 class="text-2xl font-medium mb-4 md:text-3xl md:mb-6">Share your bookmarks</h3>
-            <p class="font-normal text-base text-gray-400 mb-6 md:text-xl md:mb-8 md:leading-8">
-              Easily share your bookmarks and collections with others. Create a shareable 
-              link that you can send at the click of a button.
-            </p>
-            <button type="button" aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>
+          <!-- Tab 3 -->
+          <div id="tab-sharing" class="tab-panel">
+            <div class="mx-7 md:flex-[1.1] md:min-h-[520px] md:flex md:justify-center md:items-center">
+              <img src="./images/illustration-features-tab-3.svg" alt="Share your bookmarks" class="w-full h-auto object-cover" />
+            </div>
+            <div class="mx-7 text-center mb-30 pt-20 md:flex-[0.9] md:flex md:flex-col md:justify-center md:text-start md:items-start md:pt-0 md:mb-0 lg:pl-20">
+              <h3 class="text-2xl font-medium mb-4 md:text-3xl md:mb-6">Share your bookmarks</h3>
+              <p class="font-normal text-base text-gray-400 mb-6 md:text-xl md:mb-8 md:leading-8">
+                Easily share your bookmarks and collections with others. Create a shareable 
+                link that you can send at the click of a button.
+              </p>
+              <button type="button" aria-label="More info" class="invisible bg-blue-600 px-5 text-white rounded-md shadow-lg py-3 md:visible md:px-7">More Info</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Features -->
     <!-- Download -->
-    <section class="mx-9 mb-35 md:mt-20">
+    <section class="mx-9 mb-35 md:mt-20 lg:max-w-screen-2xl lg:mx-auto">
       <div class="text-center font-medium md:max-w-150 md:mx-auto">
         <h2 class="text-2xl mb-4 md:text-3xl md:mb-6">Download the extension</h2>
         <p class="font-normal text-base text-gray-400 mb-6 md:text-xl md:mb-10">
@@ -334,7 +331,7 @@
     <!-- Subscription -->
   </main>
   <footer class="bg-blue-950">
-    <div class="py-10 flex flex-col justify-center items-center md:flex-row md:justify-between md:mx-30">
+    <div class="py-10 flex flex-col justify-center items-center md:flex-row md:justify-between md:mx-30 lg:max-w-screen-2xl lg:mx-auto lg:px-30">
       <div class="md:flex md:items-center md:gap-10">
         <div class="flex items-center gap-3">
           <img src="./images/logo-bookmark-logo.svg" alt="Bookmark Logo" />

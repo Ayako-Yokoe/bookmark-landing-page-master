@@ -1,6 +1,7 @@
 const openBtn = document.getElementById('open-btn');
 const closeBtn = document.getElementById('close-btn');
 const menu = document.querySelector('.menu');
+const logoOriginal = document.getElementById('logo-oriignal');
 const questions = document.querySelectorAll('.question');
 const tabButtons = document.querySelectorAll('.tab-button');
 const tabPanels = document.querySelectorAll('.tab-panel');
@@ -10,12 +11,17 @@ openBtn.addEventListener('click', () => {
   menu.classList.add('active');
   openBtn.setAttribute('aria-expanded', 'true');
   closeBtn.setAttribute('aria-expanded', 'false');
+  logoOriginal.style.visibility = 'hidden';
+  openBtn.style.visibility = 'hidden';
+
 });
 
 closeBtn.addEventListener('click', () => {
   menu.classList.remove('active');
   openBtn.setAttribute('aria-expanded', 'false');
   closeBtn.setAttribute('aria-expanded', 'true');
+  logoOriginal.style.visibility = 'visible';
+  openBtn.style.visibility = 'visible';
 });
 
 // Tab
@@ -36,7 +42,7 @@ questions.forEach((question) => {
 
 function toggleAnswer() {
   const targetId = this.getAttribute('aria-controls');
-  let targetAnswer = document.getElementById(targetId);
+  const targetAnswer = document.getElementById(targetId);
   let isExpanded = this.getAttribute('aria-expanded') === 'true';
 
   this.setAttribute('aria-expanded', !isExpanded);
