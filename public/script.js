@@ -43,7 +43,7 @@ questions.forEach((question) => {
 function toggleAnswer() {
   const targetId = this.getAttribute('aria-controls');
   const targetAnswer = document.getElementById(targetId);
-  let isExpanded = this.getAttribute('aria-expanded') === 'true';
+  const isExpanded = this.getAttribute('aria-expanded') === 'true';
 
   this.setAttribute('aria-expanded', !isExpanded);
 
