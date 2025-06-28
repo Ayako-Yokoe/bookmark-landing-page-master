@@ -42,7 +42,7 @@
               alt="Bookmark logo" 
               style="filter: invert(1) saturate(0%) brightness(2) contrast(100%);" 
               /> -->
-            <button aria-label="Close menu" aria-expanded="true" id="close-btn">
+            <button type="button" aria-label="Close menu" aria-expanded="true" id="close-btn">
               <img src="./images/icon-close.svg" alt="Close menu" />
             </button>
           </div>
@@ -213,15 +213,15 @@
       <div>
         <article class="relative accordion-border">
           <!-- Question 1 -->
-          <div class="flex justify-between pt-6 pb-4 cursor-pointer hover:text-red-400 question" role="button" aria-expanded="false" aria-controls="faq1" tabindex="0">
+          <button class="flex justify-between items-center text-start w-full pt-6 pb-4 cursor-pointer hover:text-red-400 question" aria-expanded="false" aria-controls="faq1" type="button">
             <h3 class="font-medium md:font-normal">What is Bookmark?</h3>
-            <button class="toggle-ans-icon-open" aria-label="Toggle answer to open" aria-expanded="false">
+            <span class="toggle-ans-icon-open">
               <img src="./images/icon-arrow.svg" alt="Answer closed" />
-            </button>
-            <button aria-label="Toggle answer to close" aria-expanded="false" class="toggle-ans-icon-close toggle-ans-icon-hidden">
+            </span>
+            <span class="toggle-ans-icon-close toggle-ans-icon-hidden">
               <img src="./images/icon-arrow-active.svg" alt="Answer open" class="rotate-180" />
-            </button>
-          </div>
+            </span>
+          </button>
           <!-- Answer 1 -->
           <p id="faq1" class="font-normal text-base text-gray-600 leading-8 accordion-hidden">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
@@ -230,15 +230,15 @@
         </article>
         <article class="relative accordion-border">
           <!-- Question 2 -->
-          <div class="flex justify-between pt-6 pb-4 cursor-pointer hover:text-red-400 question" role="button" aria-expanded="false" aria-controls="faq2" tabindex="0">
+          <button class="flex justify-between items-center text-start w-full pt-6 pb-4 cursor-pointer hover:text-red-400 question" aria-expanded="false" aria-controls="faq2" type="button">
             <h3 class="font-medium md:font-normal">How can I request a new browser?</h3>
-            <button class="toggle-ans-icon-open" aria-label="Toggle answer to open" aria-expanded="false">
+            <span class="toggle-ans-icon-open">
               <img src="./images/icon-arrow.svg" alt="Answer closed" />
-            </button>
-            <button aria-label="Toggle answer to close" aria-expanded="false" class="toggle-ans-icon-close toggle-ans-icon-hidden">
+            </span>
+            <span class="toggle-ans-icon-close toggle-ans-icon-hidden">
               <img src="./images/icon-arrow-active.svg" alt="Answer open" class="rotate-180" />
-            </button>
-          </div>
+            </span>
+          </button>
           <!-- Answer 2 -->
           <p id="faq2" class="font-normal text-base text-gray-600 leading-8 accordion-hidden">
             Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
@@ -249,15 +249,15 @@
         </article>
         <article class="relative accordion-border">
           <!-- Question 3 -->
-          <div class="flex justify-between pt-6 pb-4 cursor-pointer hover:text-red-400 question" role="button" aria-expanded="false" aria-controls="faq3" tabindex="0">
+          <button class="flex justify-between items-center text-start w-full pt-6 pb-4 cursor-pointer hover:text-red-400 question" aria-expanded="false" aria-controls="faq3" type="button">
             <h3 class="font-medium md:font-normal">Is there a mobile app?</h3>
-            <button class="toggle-ans-icon-open" aria-label="Toggle answer to open" aria-expanded="false">
+            <span class="toggle-ans-icon-open">
               <img src="./images/icon-arrow.svg" alt="Answer closed" />
-            </button>
-            <button aria-label="Toggle answer to close" aria-expanded="false" class="toggle-ans-icon-close toggle-ans-icon-hidden">
+            </span>
+            <span class="toggle-ans-icon-close toggle-ans-icon-hidden">
               <img src="./images/icon-arrow-active.svg" alt="Answer open" class="rotate-180" />
-            </button>
-          </div>
+            </span>
+          </button>
           <!-- Answer 3 -->
           <p id="faq3" class="font-normal text-base text-gray-600 leading-8 accordion-hidden">
             Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
@@ -267,15 +267,15 @@
         </article>
         <article class="relative accordion-border">
           <!-- Question 4 -->
-          <div class="flex justify-between pt-6 pb-4 cursor-pointer hover:text-red-400 question" role="button" aria-expanded="false" aria-controls="faq4" tabindex="0">
+          <button class="flex justify-between items-center text-start w-full pt-6 pb-4 cursor-pointer hover:text-red-400 question" aria-expanded="false" aria-controls="faq4" type="button">
             <h3 class="font-medium md:font-normal">What about other Chromium browsers?</h3>
-            <button class="toggle-ans-icon-open" aria-label="Toggle answer to open" aria-expanded="false">
+            <span class="toggle-ans-icon-open">
               <img src="./images/icon-arrow.svg" alt="Answer closed" />
-            </button>
-            <button aria-label="Toggle answer to close" aria-expanded="false" class="toggle-ans-icon-close toggle-ans-icon-hidden">
+            </span>
+            <span class="toggle-ans-icon-close toggle-ans-icon-hidden">
               <img src="./images/icon-arrow-active.svg" alt="Answer open" class="rotate-180" />
-            </button>
-          </div>
+            </span>
+          </button>
           <!-- Answer 4 -->
           <p id="faq4" class="font-normal text-base text-gray-600 leading-8 accordion-hidden">
             Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
